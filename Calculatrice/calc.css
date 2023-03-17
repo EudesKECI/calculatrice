@@ -1,0 +1,102 @@
+body {
+    display: grid;
+    place-content: center;
+
+    background-color: blueviolet;
+
+}
+
+.calculatrice{
+    position:relative;
+    top: 50%;
+    
+}
+
+
+.ecran {
+    position: relative;
+    width: 207px;
+    height: 100px;
+    background-color: rgb(41, 29, 210);
+}
+
+.touche {
+    position: relative;
+    display: grid;
+
+    width: 207px;
+    height: 258px;
+    display: grid;
+    grid-template-areas:
+        "a a a"
+        "b b c";
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(2, 50px);
+
+
+
+    gap: 1px;
+    background-color: azure;
+
+
+}
+
+
+
+.touche1 {
+    display: grid;
+
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(1, 50px);
+
+
+    grid-column: span 2;   /* les touches Ac et DEL ne s'étalent pas sur 2 colonnes. Je ne comprend pas ?!*/
+
+
+    grid-area: a;
+    gap: 2px; 
+
+
+}
+
+
+
+
+
+.touche2 {
+    display: grid;
+
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(4, 50px);
+    grid-area: b;
+    gap: 2px;
+
+}
+
+.touche3 {
+    display: grid;
+    grid-template-columns: repeat(1, 50px);
+    grid-template-rows: repeat(4, 50px);
+    grid-area: c;
+    gap: 2px;
+    margin: 0px 54px;
+
+
+}
+
+/* div:nth-child(3) {
+    margin: 2px 56px;
+
+} */
+
+
+button {
+    /* margin: 10px; */
+    font-size: 20px;
+    border: none;
+    background-color: rgb(149, 171, 227);
+}
+
+button:hover {
+    background-color: rgb(255, 0, 0);
+}
